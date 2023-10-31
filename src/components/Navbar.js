@@ -20,9 +20,10 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`${navColour ? "sticky" : "navbar"} `}>
-            <div>Home</div>
-        </nav>
+      // <nav>
+      <nav className={`${navColour ? "sticky" : "navbar"}`}>
+        Home
+      </nav>
     );
 };
 

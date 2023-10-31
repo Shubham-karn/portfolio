@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import '../styles/style.css'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
+import Particles from '../components/particles';
 
 
 function MyApp({ Component, pageProps }) {
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:site_name" content="Sajha Ghar" */}
           {/* key="ogsitename" /> */}
       </Head>
+      <Particles />
       <Component {...pageProps} />
 
     </main>
