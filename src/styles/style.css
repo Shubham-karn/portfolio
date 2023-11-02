@@ -92,3 +92,26 @@ button:focus {
   width: 100%;
   height: 100%;
 }
+
+.fork-btn {
+  font-size: 1.1em !important;
+  padding-top: 15px !important;
+}
+
+.fork-btn-inner {
+  line-height: 1.4em !important;
+  background-color: #934cce5e !important;
+  padding: 0.25rem 1.1rem !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 10px;
+}
+
+.fork-btn-inner:hover {
+  transform: translateY(-2px) !important;
+  background-color: #a24dd386 !important;
+  border-color: #a24dd386 !important;
+}
+.fork-btn-inner::after {
+  display: none !important;
+}
