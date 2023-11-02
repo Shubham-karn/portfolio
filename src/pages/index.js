@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import NavBar from '../components/Navbar';
 import Type from '../components/Type';
+import Image from 'next/image';
 
 export default function Index() {
     return (
@@ -11,7 +12,7 @@ export default function Index() {
           <NavBar />
           <section>
             <div className='home-section'>
-              <div className='text-gray-300 flex mx-auto m-[20] w-80/100 pt-[9rem] pb-[2rem] text-left'>
+              <div className='text-gray-300 flex mx-20 w-80/100 pt-[9rem] pb-[2rem] text-left'>
                   <div className='pt-[80px] w-7/12 flex flex-col'>
                   <h1 className='pl-[50px] text-4xl'>
                 Hi There!{" "}
@@ -32,7 +33,14 @@ export default function Index() {
 
                   </div>
 
-                  <div className='w-5/12'>kena</div>
+                  <div className='w-5/12 pb-[20px]'>
+                  <Image
+                src="/home-main.svg"
+                alt="home pic"
+                width={535}
+                height={535}
+              />
+                  </div>
               </div>
             </div>
           </section>
