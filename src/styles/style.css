@@ -37,7 +37,7 @@ button:focus {
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
-  font-size: 1.2rem !important;
+  font-size: 1.3rem !important;
 }
 
 .home-section {
@@ -104,7 +104,7 @@ button:focus {
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .fork-btn-inner:hover {

@@ -7,6 +7,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgGitFork } from "react-icons/cg";
+import Image from 'next/image';
 
 const Navbar = () => {
   const [expand, updateExpanded] = useState(false);
@@ -29,30 +30,40 @@ const Navbar = () => {
     return (
       <nav className={`${navColour ? "sticky" : "navbar"} flex text-gray-300 mx-10 w-full`}>
         <div className="">
-          Home
+          <Link href='/'>
+        <Image
+                src="/logo.png"
+                alt="logo"
+                width={60}
+                height={60}
+              />
+          </Link>
         </div>
-        <div className='flex justify-end'>
-          <Link href="/destination-page" className='p-4 flex item-center'>
+        <div className='flex justify-end w-[85vw]'>
+          <Link href="/" className='py-4 px-8 flex item-center'>
               <AiOutlineHome style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>Home</span>
           </Link>
-          <Link href="/destination-page" className='p-4 flex item-center'>
+          <Link href="/about" className='py-4 px-8 flex item-center'>
               <AiOutlineUser style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>About</span>
           </Link>
-          <Link href="/destination-page" className='p-4 flex item-center'>
+          <Link href="/projects" className='py-4 px-8 flex item-center'>
               <AiOutlineFundProjectionScreen style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>Projects</span>
           </Link>
-        </div>
-        <div className='fork-btn'>
-          <button className='fork-btn-inner flex'>
+        <div className='fork-btn px-8'>
+          <Link 
+          href='https://github.com/Shubham-karn'
+          target="_blank"
+          className='fork-btn-inner flex'>
           <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
           <AiFillStar style={{ fontSize: "1.1em" }} />
-          </button>
+          </Link>
+        </div>
         </div>
       </nav>
     );
