@@ -28,33 +28,41 @@ const Navbar = () => {
 
 
     return (
-      <nav className={`${navColour ? "sticky" : "navbar"} flex text-gray-300 mx-10 w-full`}>
-        <div className="">
+      <nav className={`${navColour ? "sticky" : "navbar"} flex text-gray-300 px-10 w-full`}>
+        <div className="p-2 ml-4">
           <Link href='/'>
         <Image
                 src="/logo.png"
                 alt="logo"
-                width={60}
-                height={60}
+                width={50}
+                height={50}
               />
           </Link>
         </div>
         <div className='flex justify-end w-[85vw]'>
-          <Link href="/" className='py-4 px-8 flex item-center'>
+          <div className='my-4 mx-8 navbar-nav'>
+          <Link href="/" className='flex item-center'>
               <AiOutlineHome style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>Home</span>
+              {/* <span className='navbar-nav'>brvdj
+              </span> */}
           </Link>
-          <Link href="/about" className='py-4 px-8 flex item-center'>
+          </div>
+          <div className='my-4 mx-8 navbar-nav'>
+          <Link href="/about" className='flex item-center'>
               <AiOutlineUser style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>About</span>
           </Link>
-          <Link href="/projects" className='py-4 px-8 flex item-center'>
+          </div>
+          <div className='my-4 mx-8 navbar-nav'>
+          <Link href="/projects" className='flex item-center'>
               <AiOutlineFundProjectionScreen style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>Projects</span>
           </Link>
+          </div>
         <div className='fork-btn px-8'>
           <Link 
           href='https://github.com/Shubham-karn'
