@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import NavBar from '../components/Navbar';
+import Footer from '../components/Footer';
 import Type from '../components/Type';
 import Image from 'next/image';
 import {
@@ -62,7 +63,7 @@ export default function Index() {
               <br />
               <br />I am fluent in classics like
               <i>
-                <b className="purple"> C++, Javascript and Go. </b>
+                <b className="purple"> C++, Javascript and Python. </b>
               </i>
               <br />
               <br />
@@ -71,13 +72,13 @@ export default function Index() {
                 <b className="purple">Web Technologies and Products </b> and
                 also in areas related to{" "}
                 <b className="purple">
-                  Blockchain.
+                  Machine Learning and Artificial Intelligence.
                 </b>
               </i>
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
+              with <b className="purple">Django and Node.js</b> and
               <i>
                 <b className="purple">
                   {" "}
@@ -90,7 +91,7 @@ export default function Index() {
               </i>
             </p>
               </div>
-              <div className='w-2/5 p-[40px] pr-[100px] pt-[10px] justify-center'>
+              <div className='w-[45vw] p-[40px] pr-[100px] pt-[10px] justify-center'>
               <Image
                 src="/avatar.svg"
                 alt="logo"
@@ -158,6 +159,7 @@ export default function Index() {
             </ul>
             </div>
           </section>
+          <Footer />
         </>
     );
   }

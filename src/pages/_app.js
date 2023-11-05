@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <main>
       <Head>
-        <title>Portfolio</title>
+        <title>Shubham Karn | Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta property="og:url" content={process.env.FRONTEND + router.asPath} key="ogurl" />

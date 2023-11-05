@@ -119,15 +119,6 @@ button:focus {
   display: none !important;
 }
 
-/* .navbar-nav{
-  position: relative;
-  margin-left: 20px;
-  font-weight: 400;
-  transition: all 0.3s ease-out 0s;
-  position: relative;
-  z-index: 1;
-} */
-
 .navbar-nav::after {
   content: "";
   position: relative;
