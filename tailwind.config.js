@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '1200': { 'max': '1199px' }, 
+        '1100': { 'max': '1099px' },
+        '800': { 'max': '799px' },
+      },
       colors: {
         'custom-color': 'rgb(10, 4, 22)',
       },

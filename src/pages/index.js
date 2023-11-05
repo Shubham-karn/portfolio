@@ -55,8 +55,8 @@ export default function Index() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             
-            <div className='flex relative pb-[20px] pt-[20px]'>
-              <div className='text-gray-300 p-[50px] pl-[100px] text-left text-xl'>
+            <div className='flex relative pb-[20px] pt-[20px] z-[-1]'>
+              <div className='text-gray-300 p-[50px] pl-[100px] text-left text-xl 1100:pr-[100px]'>
             <p>
             I fell in love with programming and I have at least learnt
               something, I think… 🤷‍♂️
@@ -91,7 +91,7 @@ export default function Index() {
               </i>
             </p>
               </div>
-              <div className='w-[45vw] p-[40px] pr-[100px] pt-[10px] justify-center'>
+              <div className='w-[45vw] p-[40px] pr-[100px] pt-[10px] justify-center 1200:pt-[80px] 1100:hidden'>
               <Image
                 src="/avatar.svg"
                 alt="logo"
