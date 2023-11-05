@@ -8,10 +8,12 @@ import {
 } from "react-icons/ai";
 import { CgGitFork } from "react-icons/cg";
 import Image from 'next/image';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
 const Navbar = () => {
-  const [expand, updateExpanded] = useState(false);
+  
   const [navColour, updateNavbar] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   useEffect(() => {
     const changeNavbarColor = () => {
@@ -36,17 +38,17 @@ const Navbar = () => {
                 alt="logo"
                 width={50}
                 height={50}
+                className='800:w-[60px] 800:h-[60px]'
               />
           </Link>
         </div>
-        <div className='flex justify-end w-[85vw]'>
+        <RiMenu3Line color="#667eea" size={40} onClick={() => setToggleMenu(true)} className='hidden 800:block 800:ml-auto 800:mr-8 800:my-4' />
+        <div className='flex justify-end w-[85vw] 800:hidden'>
           <div className='my-4 mx-8 navbar-nav'>
           <Link href="/" className='flex item-center'>
               <AiOutlineHome style={{ marginTop: "5px" }}/>
               {" "}
               <span style={{ marginLeft: "10px" }}>Home</span>
-              {/* <span className='navbar-nav'>brvdj
-              </span> */}
           </Link>
           </div>
           <div className='my-4 mx-8 navbar-nav'>
