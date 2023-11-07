@@ -11,8 +11,8 @@ module.exports = {
         'custom': '15px'
      },
       screens: {
-        '1200': { 'max': '1199px' }, 
-        '1100': { 'max': '1099px' },
+        '1200': { 'max': '1199px', 'min': '1100px' }, 
+        '1100': { 'max': '1099px', 'min': '800px' },
         '800': { 'max': '799px' },
       },
       colors: {
