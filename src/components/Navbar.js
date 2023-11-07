@@ -39,13 +39,13 @@ const Navbar = () => {
                   alt="logo"
                   width={50}
                   height={50}
-                  className='800:w-[60px] 800:h-[60px]'
+                  className='800:w-[40px] 800:h-[40px]'
                 />
             </Link>
           </div>
           {toggleMenu
-          ? <RiMenu3Line color="#667eea" size={40} onClick={() => setToggleMenu(false)} className='hidden 800:block 800:ml-auto 800:mr-5 800:my-4' />
-          : <RiCloseLine color="#667eea" size={40} onClick={() => setToggleMenu(true)} className='hidden 800:block 800:ml-auto 800:mr-5 800:my-4' />}
+          ? <RiMenu3Line color="#667eea" size={40} onClick={() => setToggleMenu(false)} className='hidden 800:block 800:ml-auto 800:mr-5 800:my-2' />
+          : <RiCloseLine color="#667eea" size={40} onClick={() => setToggleMenu(true)} className='hidden 800:block 800:ml-auto 800:mr-5 800:my-2' />}
  
           <div className='flex justify-end w-[85vw] 800:hidden'>
             <div className='my-4 mx-8 navbar-nav'>
@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         
         {!toggleMenu && (
-            <div className='fixed top-[86px] w-full bg-navbar-color backdrop-blur-custom text-gray-300 text-[1.3rem]'>
+            <div className='fixed top-[65px] w-full bg-navbar-color backdrop-blur-custom text-gray-300 text-[1.3rem]'>
               <div className='my-4 mx-8'>
             <Link href="/" className='flex item-center justify-center'>
                 <AiOutlineHome style={{ marginTop: "5px" }}/>
