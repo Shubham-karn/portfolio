@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
       <nav>
-        <div className={`${navColour ? "sticky" : "navbar"} flex text-gray-300 px-10 w-full ${toggleMenu ? '' : 'bg-navbar-color backdrop-blur-custom'}`}>
+        <div className={`${navColour ? "sticky" : "navbar"} flex text-gray-300 px-8 py-[0.3rem] 800:px-2 w-full ${toggleMenu ? '' : 'bg-navbar-color backdrop-blur-custom'}`}>
           <div className="p-2 ml-4">
             <Link href='/'>
           <Image
@@ -44,8 +44,8 @@ const Navbar = () => {
             </Link>
           </div>
           {toggleMenu
-          ? <RiMenu3Line color="#667eea" size={40} onClick={() => setToggleMenu(false)} className='hidden 800:block 800:ml-auto 800:mr-8 800:my-4' />
-          : <RiCloseLine color="#667eea" size={40} onClick={() => setToggleMenu(true)} className='hidden 800:block 800:ml-auto 800:mr-8 800:my-4' />}
+          ? <RiMenu3Line color="#667eea" size={40} onClick={() => setToggleMenu(false)} className='hidden 800:block 800:ml-auto 800:mr-5 800:my-4' />
+          : <RiCloseLine color="#667eea" size={40} onClick={() => setToggleMenu(true)} className='hidden 800:block 800:ml-auto 800:mr-5 800:my-4' />}
  
           <div className='flex justify-end w-[85vw] 800:hidden'>
             <div className='my-4 mx-8 navbar-nav'>
@@ -104,11 +104,11 @@ const Navbar = () => {
                 <span style={{ marginLeft: "10px" }}>Projects</span>
             </Link>
             </div>
-          <div className='fork-btn mx-[280px] my-[10px] mt-[0px]'>
+          <div className='fork-btn flex justify-center my-[10px] mt-[0px]'>
             <Link 
             href='https://github.com/Shubham-karn'
             target="_blank"
-            className='fork-btn-inner flex justify-center'>
+            className='fork-btn-inner flex justify-center w-[90px]'>
             <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
             <AiFillStar style={{ fontSize: "1.1em" }} />
             </Link>

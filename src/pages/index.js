@@ -19,23 +19,23 @@ export default function Index() {
           <NavBar />
           <section>
             <div className='home-section'>
-              <div className='text-gray-300 flex mx-20 w-80/100 pt-[9rem] pb-[2rem] text-left'>
-                  <div className='pt-[80px] w-7/12 flex flex-col'>
-                  <h1 className='pl-[50px] text-4xl'>
+              <div className='text-gray-300 flex mx-20 w-80/100 pt-[9rem] pb-[2rem] text-left 800:block 800:mx-8'>
+                  <div className='pt-[80px] w-7/12 flex flex-col 800:w-full'>
+                  <h1 className='pl-[50px] text-4xl 800:pl-[30px]'>
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
-              <h1 className="mt-[25px] pl-[45px] text-[2.5em]">
+              <h1 className="mt-[25px] pl-[45px] text-[2.5em] 800:pl-[30px]">
                 I'M
                 <strong className="text-indigo-500"> SHUBHAM KARN</strong>
               </h1>
 
               
-              <div className='p-[50px] text-left'>
-                <strong className="text-indigo-500 text-[2.5em]"><Type /></strong>
+              <div className='p-[50px] text-left 800:p-[25px] 800:pt-[45px]'>
+                <strong className="text-indigo-500 text-[2.5em] 800:text-[1.4em]"><Type /></strong>
               </div>
 
                   </div>
