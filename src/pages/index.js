@@ -35,12 +35,12 @@ export default function Index() {
 
               
               <div className='p-[50px] text-left 800:p-[25px] 800:pt-[45px]'>
-                <strong className="text-indigo-500 text-[2.5em] 800:text-[1.4em]"><Type /></strong>
+                <strong className="text-indigo-500 text-[2.5em] 800:text-[1.3em]"><Type /></strong>
               </div>
 
                   </div>
 
-                  <div className='w-5/12 pb-[20px]'>
+                  <div className='w-5/12 pb-[20px] 800:w-full 800:pt-[30px]'>
                   <Image
                 src="/home-main.svg"
                 alt="home pic"
