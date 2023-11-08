@@ -42,7 +42,7 @@ export default function Index() {
               </h1>
 
               <h1 className="mt-[25px] pl-[45px] text-[2.5em] 800:pl-[30px]">
-                I'M
+                I&apos;M
                 <strong className="text-indigo-500"> SHUBHAM KARN</strong>
               </h1>
 
@@ -80,7 +80,7 @@ export default function Index() {
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My field of Interest&apos;s are building new &nbsp;
               <i>
                 <b className="purple">Web Technologies and Products </b> and
                 also in areas related to{" "}

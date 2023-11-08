@@ -28,15 +28,27 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router])
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    window.scrollTo(0, 0);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <main>
       <Head>
         <title>Shubham Karn | Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <meta property="og:url" content={process.env.FRONTEND + router.asPath} key="ogurl" />
-        <meta property="og:site_name" content="Sajha Ghar" */}
-          {/* key="ogsitename" /> */}
+        <meta property="og:title" content="Shubham Karn | Portfolio" key="title" />
       </Head>
       <Particles />
       <Component {...pageProps} />
