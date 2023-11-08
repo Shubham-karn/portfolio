@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useState, useEffect } from 'react';
+import Preload from '../components/pre';
 import Type from '../components/Type';
 import Image from 'next/image';
 import {
@@ -11,11 +13,22 @@ import {
 import { FaLinkedinIn } from "react-icons/fa";
 
 export default function Index() {
+  const [load, upadateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
     return (
         <>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
+          <Preload load={load} />
+          <div className="App" id={load ? "no-scroll" : "scroll"}></div>
           <NavBar />
           <section>
             <div className='home-section'>
