@@ -3,6 +3,7 @@ import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useState, useEffect } from 'react';
 import Preload from '../components/pre';
+import ScrollTop from '../components/ScrollTop';
 import Type from '../components/Type';
 import Image from 'next/image';
 import {
@@ -173,6 +174,7 @@ export default function Index() {
             </ul>
             </div>
           </section>
+          <ScrollTop />
           <Footer />
         </>
     );
