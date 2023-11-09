@@ -104,7 +104,7 @@ const Navbar = () => {
                 <span style={{ marginLeft: "10px" }}>Projects</span>
             </Link>
             </div>
-          <div className='fork-btn flex justify-center my-[10px] mt-[0px]'>
+          <div style={{paddingTop : '0px'}} className='fork-btn flex justify-center my-[10px] mt-[0px]'>
             <Link 
             href='https://github.com/Shubham-karn'
             target="_blank"

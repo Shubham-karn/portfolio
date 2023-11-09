@@ -97,7 +97,7 @@ button:focus {
 
 .fork-btn {
   font-size: 1.1em !important;
-  padding-top: 15px !important;
+  padding-top: 15px;
 }
 
 .fork-btn-inner {
