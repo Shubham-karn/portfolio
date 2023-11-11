@@ -23,8 +23,11 @@ function About() {
             <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Shubham Karn </span>
             from <span className="purple"> Kathmandu, Nepal.</span>
-            <br /> I am a final year student pursuing Engineering
-            at Pulchowk Campus.
+            <br /> I am a final year student pursuing <span className='purple'>Engineering </span>
+             at <span className="purple"> Pulchowk Campus</span>.
+            <br />
+            <br />
+            Proven track record of delivering top-notch projects, ready to turn your ideas into reality and bring your vision to life.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
@@ -45,6 +48,9 @@ function About() {
             </div>
           </div>
               </div>
+              <p style={{ fontSize: "1.25rem", paddingBottom: "20px" }} className='mx-auto text-quote'>
+                "Building digital products, brands and experience."
+                </p>
               </div>
             <div className='w-5/12 pb-[20px] 800:w-full 800:pt-[30px]'>
                   <Image

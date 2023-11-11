@@ -17,7 +17,8 @@ module.exports = {
       },
       colors: {
         'custom-color': 'rgb(10, 4, 22)',
-        'navbar-color': '#1b1a2ea9'
+        'navbar-color': '#1b1a2ea9',
+        'quote':'rgba(178, 121, 216, 0.959)'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
