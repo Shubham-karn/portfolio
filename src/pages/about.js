@@ -52,12 +52,12 @@ function About() {
                 "Building digital products, brands and experience."
                 </p>
               </div>
-            <div className='w-5/12 pb-[20px] 800:w-full 800:pt-[30px]'>
+            <div className='w-5/12 pb-[20px] pt-[130px] 800:w-full 800:pt-[30px]'>
                   <Image
                 src="/about.png"
                 alt="home pic"
-                width={535}
-                height={535}
+                width={700}
+                height={700}
               />
                   </div>
         </div>
