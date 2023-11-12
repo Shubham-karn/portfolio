@@ -5,6 +5,30 @@ import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 import Image from 'next/image';
 import { ImPointRight } from "react-icons/im";
+import { CgCPlusPlus } from "react-icons/cg";
+import {
+  DiJavascript1,
+  DiReact,
+  DiNodejs,
+  DiMongodb,
+  DiPython,
+  DiGit,
+  DiJava,
+  DiDatabase,
+  DiGithubAlt,
+  DiAws,
+} from "react-icons/di";
+import {
+  SiRedis,
+  SiFirebase,
+  SiNextdotjs,
+  SiSolidity,
+  SiPostgresql,
+  SiDjango,
+  SiTailwindcss,
+  SiMysql,
+  SiThemoviedatabase
+} from "react-icons/si";
 
 function About() {
   return (
@@ -61,6 +85,46 @@ function About() {
               />
                   </div>
         </div>
+
+        <h1 style={{ fontSize: "2.3em" }} className='text-gray-300 pt-[50px] pb-[20px] text-center'>
+              Professional <span className="purple"> Skillset </span>
+            </h1>
+
+      <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <CgCPlusPlus />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiJavascript1 />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiNodejs />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiReact />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiDatabase />
+        </div>    
+      </div>
+
+      <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiNextdotjs />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiDjango />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiTailwindcss />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiAws />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiFirebase />
+        </div>    
+      </div>
     </section>
     <ScrollTop />
     <Footer />
