@@ -10,25 +10,22 @@ import {
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
   DiPython,
   DiGit,
-  DiJava,
-  DiDatabase,
-  DiGithubAlt,
-  DiAws,
+  DiDjango,
 } from "react-icons/di";
 import {
-  SiRedis,
-  SiFirebase,
   SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
-  SiDjango,
+  SiAmazonaws,
   SiTailwindcss,
-  SiMysql,
-  SiThemoviedatabase
+  SiJupyter,
+  SiTensorflow,
+  SiNginx,
+  SiScikitlearn,
+  SiVisualstudiocode,
+  SiPostman,
 } from "react-icons/si";
+import {FaDocker, FaDatabase, FaLinux} from "react-icons/fa";
 
 function About() {
   return (
@@ -91,6 +88,7 @@ function About() {
             </h1>
 
       <div className='flex justify-center text-white mx-20'>
+      {/* <div className='grid grid-cols-5 justify-items-center gap-0 text-white mx-20'> */}
         <div className='tech-icons py-[30px] px-[70px]'>
           <CgCPlusPlus />
         </div>
@@ -104,7 +102,7 @@ function About() {
           <DiReact />
         </div>
         <div className='tech-icons py-[30px] px-[70px]'>
-          <DiDatabase />
+          <FaDatabase />
         </div>    
       </div>
 
@@ -113,18 +111,56 @@ function About() {
           <SiNextdotjs />
         </div>
         <div className='tech-icons py-[30px] px-[70px]'>
-          <SiDjango />
+          <DiDjango />
         </div>
         <div className='tech-icons py-[30px] px-[70px]'>
           <SiTailwindcss />
         </div>
         <div className='tech-icons py-[30px] px-[70px]'>
-          <DiAws />
+          <SiAmazonaws />
         </div>
         <div className='tech-icons py-[30px] px-[70px]'>
-          <SiFirebase />
+          <SiNginx />
         </div>    
       </div>
+
+      <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiPython />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiJupyter />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiTensorflow />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiScikitlearn />
+        </div>    
+      </div>
+
+      <h1 style={{ fontSize: "2.3em" }} className='text-gray-300 pt-[50px] pb-[20px] text-center'>
+            <span className="purple"> Tools </span> I Use
+            </h1>
+
+            <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaLinux />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiVisualstudiocode />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiPostman />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiGit />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaDocker />
+        </div>    
+      </div>
+
     </section>
     <ScrollTop />
     <Footer />
