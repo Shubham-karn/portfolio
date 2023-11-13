@@ -75,7 +75,7 @@ function About() {
           </div>
               </div>
               <p style={{ fontSize: "1.25rem", paddingBottom: "20px" }} className='mx-auto text-quote'>
-                "Building digital products, brands and experience."
+              &quotBuilding digital products, brands and experience.&quot
                 </p>
               </div>
             <div className='w-5/12 pb-[20px] pt-[130px] 800:w-full 800:pt-[30px]'>
