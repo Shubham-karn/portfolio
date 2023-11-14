@@ -68,7 +68,7 @@ function About() {
     </Head>
     <NavBar />
     <section>
-        <div className='text-gray-300 flex mx-20 w-80/100 pt-[9rem] pb-[2rem] text-left small:block small:mx-8'>
+        <div className='text-gray-300 flex mx-20 w-80/100 pt-[9rem] pb-[2rem] text-left small:block 1100:mx-8 800:ml-[0rem] 800:mr-8'>
             <div className='pt-[80px] w-7/12 flex flex-col small:w-full'>
                 <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }} className='mx-auto'>
                 Know Who <strong className="purple">I&apos;M</strong>
@@ -102,7 +102,7 @@ function About() {
             </div>
           </div>
               </div>
-              <p style={{ fontSize: "1.25rem", paddingBottom: "20px" }} className='mx-auto text-quote'>
+              <p style={{ fontSize: "1.25rem", paddingBottom: "20px" }} className='mx-auto text-quote 800:ml-[25px]'>
               &quot;Building digital products, brands and experience.&quot;
                 </p>
               </div>
@@ -463,7 +463,81 @@ function About() {
         </div>    
       </div>
       )
-    : <></>}
+    : (load===1000 ? 
+      <>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaLinux />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiVisualstudiocode />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiPostman />   
+      </div>
+      </div>
+      <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiGit />
+        </div> 
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaDocker />
+        </div>    
+      </div>
+    </> 
+    : (load===700 ?
+      <>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaLinux />
+        </div>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiVisualstudiocode />
+        </div>
+      </div>
+      <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiGit />
+        </div> 
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaDocker />
+        </div>    
+      </div>
+      <div className='flex justify-center text-white mx-20'>
+      <div className='tech-icons py-[30px] px-[70px]'>
+          <SiPostman />   
+      </div>    
+      </div>
+    </> 
+    : (load===500 ?
+      <>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaLinux />
+        </div>
+      </div>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiVisualstudiocode />
+        </div>
+      </div>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <SiPostman />
+        </div>
+      </div>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <DiGit />
+        </div>
+      </div>
+    <div className='flex justify-center text-white mx-20'>
+        <div className='tech-icons py-[30px] px-[70px]'>
+          <FaDocker />
+        </div>
+      </div>
+    </> 
+    : <></>)))}
 
 {load===1200 ? (
         <div className='flex justify-center text-white mx-20'>
