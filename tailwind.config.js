@@ -14,6 +14,7 @@ module.exports = {
         '1200': { 'max': '1199px', 'min': '1100px' }, 
         '1100': { 'max': '1099px', 'min': '800px' },
         '800': { 'max': '799px' },
+        'small': { 'max': '1099px' },
       },
       colors: {
         'custom-color': 'rgb(10, 4, 22)',
