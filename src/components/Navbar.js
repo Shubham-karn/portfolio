@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         
         {!toggleMenu && (
-            <div className='fixed top-[65px] w-full bg-navbar-color backdrop-blur-custom text-gray-300 text-[1.3rem]'>
+            <div className='fixed top-[65px] w-full bg-navbar-color backdrop-blur-custom text-gray-300 text-[1.3rem] z-50'>
               <div className='my-4 mx-8'>
             <Link href="/" className='flex item-center justify-center'>
                 <AiOutlineHome style={{ marginTop: "5px" }}/>

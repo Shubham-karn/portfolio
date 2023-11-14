@@ -54,6 +54,9 @@ function About() {
         upadateLoad(0);
     }
   }
+
+  changescreen();
+  
   window.addEventListener('resize', changescreen);
 
   return () => {
