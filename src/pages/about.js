@@ -3,6 +3,7 @@ import Head from 'next/head';
 import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
+import Github from '../components/Github';
 import Image from 'next/image';
 import { ImPointRight } from "react-icons/im";
 import { CgCPlusPlus } from "react-icons/cg";
@@ -550,6 +551,9 @@ function About() {
       </div>
       )
     : <></>}
+
+    <Github />
+
       <h1 style={{ fontSize: "2.6em" }} className='text-gray-300 pt-[50px] text-center'>
               FIND <span className="purple"> ME </span> ON
             </h1>
