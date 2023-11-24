@@ -16,12 +16,13 @@ const Github = () => {
         </div>
         <div className="text-gray-300 flex flex-col justify-center items-center mt-10 mx-10 overflow-auto">
         <GitHubCalendar
-    username="soumyajit4419"
+    username="shubham-karn"
     blockSize={15}
     blockMargin={5}
     fullYear={true}
     colorScheme="dark"
     fontSize={16}
+    showWeekdayLabels={true}
 />
         </div>
         </>
