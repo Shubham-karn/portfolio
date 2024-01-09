@@ -26,9 +26,9 @@ function projects() {
         </div>
 
         <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px]'>
-            <div className='project-card-view mx-[25px]'>
+            <div className='project-card-view mx-[25px] flex-1 h-full'>
                 <Image src='/portfolio.png' width={500} height={500} className='p-[25px]' />
-                <div className='p-[20px]'>
+                <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
                     <p className='pb-[20px]'>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
                     <div className='flex justify-center'>
@@ -43,17 +43,41 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px]'>
-                <Image src='/portfolio.png' width={500} height={300} className='p-[20px]' />
-                <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
-                <p>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
+            <div className='project-card-view mx-[25px] flex-1 h-full'>
+                <Image src='/YOLO.jpeg' width={500} height={500} className='pt-[25px] pl-[25px] pr-[25px]' />
+                <div className='p-[30px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Image Detection</h1>
+                    <p className='pb-[20px]'>A basic YOLOv8 model used to detect Cricketers in a video.</p>
+                    <div className='flex justify-center'>
+                    <Link 
+                        href='https://github.com/Shubham-karn'
+                        target="_blank"
+                        className='project-button p-[10px]'>
+                        <BsGithub style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Github</span>
+                    </Link>
+                    </div>
+                </div>
             </div>
 
-            <div className='project-card-view mx-[25px]'>
-                <Image src='/portfolio.png' width={500} height={300} className='p-[20px]' />
-                <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
-                <p>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
+            <div className='project-card-view mx-[25px] flex-1 h-full'>
+                <Image src='/logistic_regression.jpeg' width={500} height={500} className='p-[25px]' />
+                <div className='p-[30px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Data Analysis</h1>
+                    <p className='pb-[20px]'>This is a basic linear regression model using sklearn. I have analyzed the data and clearly predicted the data</p>
+                    <div className='flex justify-center'>
+                    <Link 
+                        href='https://github.com/Shubham-karn'
+                        target="_blank"
+                        className='project-button p-[10px]'>
+                        <BsGithub style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Github</span>
+                    </Link>
+                    </div>
+                </div>
             </div>
+
+
         </div>
 
     </section>
