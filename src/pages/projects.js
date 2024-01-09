@@ -30,13 +30,16 @@ function projects() {
                 <Image src='/portfolio.png' width={500} height={500} className='p-[25px]' />
                 <div className='p-[20px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
-                    <p>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
+                    <p className='pb-[20px]'>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
+                    <div className='flex justify-center'>
                     <Link 
                         href='https://github.com/Shubham-karn'
                         target="_blank"
-                        className='fork-btn-inner flex'>
+                        className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Github</span>
                     </Link>
+                    </div>
                 </div>
             </div>
 

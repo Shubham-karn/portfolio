@@ -313,3 +313,17 @@ button:focus {
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
+
+.project-button {
+  line-height: 1.4em !important;
+  background-color: #a24dd386 !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px;
+  display: inline-flex;
+}
+
+.project-button:hover {
+  background-color: var(--imp-text-color) !important;
+  border-color: #a24dd386 !important;
+}
