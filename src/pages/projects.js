@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import NavBar from '../components/Navbar';
+import Findme from '../components/Findme';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 import { BsGithub } from "react-icons/bs"
@@ -76,10 +77,63 @@ function projects() {
                     </div>
                 </div>
             </div>
-
-
         </div>
 
+        <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px]'>
+            <div className='project-card-view mx-[25px] flex-1 h-full'>
+                <Image src='/CNN.jpeg' width={500} height={500} className='p-[25px]' />
+                <div className='p-[30px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Image_classifier</h1>
+                    <p className='pb-[20px]'>This is a simple example of CNN classifying happy and sad people</p>
+                    <div className='flex justify-center'>
+                    <Link 
+                        href='https://github.com/Shubham-karn'
+                        target="_blank"
+                        className='project-button p-[10px]'>
+                        <BsGithub style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Github</span>
+                    </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className='project-card-view mx-[25px] flex-1 h-full'>
+                <Image src='/YOLO.jpeg' width={500} height={500} className='pt-[25px] pl-[25px] pr-[25px]' />
+                <div className='p-[30px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Image Detection</h1>
+                    <p className='pb-[20px]'>A basic YOLOv8 model used to detect Cricketers in a video.</p>
+                    <div className='flex justify-center'>
+                    <Link 
+                        href='https://github.com/Shubham-karn'
+                        target="_blank"
+                        className='project-button p-[10px]'>
+                        <BsGithub style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Github</span>
+                    </Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className='project-card-view mx-[25px] flex-1 h-full'>
+                <Image src='/logistic_regression.jpeg' width={500} height={500} className='p-[25px]' />
+                <div className='p-[30px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Data Analysis</h1>
+                    <p className='pb-[20px]'>This is a basic linear regression model using sklearn. I have analyzed the data and clearly predicted the data</p>
+                    <div className='flex justify-center'>
+                    <Link 
+                        href='https://github.com/Shubham-karn'
+                        target="_blank"
+                        className='project-button p-[10px]'>
+                        <BsGithub style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Github</span>
+                    </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <Findme />
     </section>
     <ScrollTop />
     <Footer />
