@@ -315,10 +315,10 @@ button:focus {
 }
 
 .project-button {
-  line-height: 1.4em !important;
-  background-color: #a24dd386 !important;
-  vertical-align: middle !important;
-  text-align: center !important;
+  line-height: 1.4em ;
+  background-color: #a24dd386 ;
+  vertical-align: middle ;
+  text-align: center ;
   border-radius: 5px;
   display: inline-flex;
 }
@@ -326,4 +326,17 @@ button:focus {
 .project-button:hover {
   background-color: var(--imp-text-color) !important;
   border-color: #a24dd386 !important;
+}
+
+@media screen and (max-width: 800px) {
+  .project-button{
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project-button{
+    margin-bottom: 20px !important;
+  }
 }

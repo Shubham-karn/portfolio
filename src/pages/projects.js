@@ -27,8 +27,8 @@ function projects() {
             </div>
         </div>
 
-        <div className='text-gray-300 flex items-stretch justify-evenly px-[100px] py-[25px]'>
-            <div className='project-card-view mx-[25px] flex-1'>
+        <div className='text-gray-300 flex items-stretch justify-evenly mx-[100px] py-[25px] 800:block 800:w-[70vw] 800:mx-auto mob:w-full mob:mr-[10px]'>
+            <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
                 <Image src='/portfolio.png' width={500} height={500} alt='portfolio' className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
@@ -45,16 +45,16 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px] flex-1'>
+            <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
                 <Image src='/YOLO.jpeg' width={500} height={500} alt='yolo' className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Image Detection</h1>
                     <p className='pb-[20px]'>A basic YOLOv8 model used to detect Cricketers in a video.</p>
-                    <div className='flex justify-center'>
+                    <div className='flex justify-center small:block small:text-center'>
                     <Link 
                         href='https://github.com/Shubham-karn/YOLO'
                         target="_blank"
-                        className='project-button p-[10px] mx-[10px]'>
+                        className='project-button p-[10px] mx-[10px] small:mb-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
                         <span style={{ marginLeft: "10px" }}>Github</span>
                     </Link>
@@ -62,7 +62,7 @@ function projects() {
                     <Link 
                         href='https://www.youtube.com/watch?v=3vDBO68fQ7s'
                         target="_blank"
-                        className='project-button p-[10px] mx-[10px]'>
+                        className='project-button p-[10px] mx-[10px] small:mt-[10px]'>
                         <CgWebsite style={{ fontSize: "1.2em" }} />{" "}
                         <span style={{ marginLeft: "10px" }}>Demo</span>
                     </Link>
@@ -71,7 +71,7 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px] flex-1'>
+            <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
                 <Image src='/logistic_regression.jpeg' width={500} height={500} alt='logistic_regression' className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Data Analysis</h1>
@@ -89,8 +89,8 @@ function projects() {
             </div>
         </div>
 
-        <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-[73vw] mx-auto'>
-            <div className='project-card-view mx-[25px] flex-1'>
+        <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-[73vw] mx-auto 800:block 800:w-[70vw] 800:mx-auto 800:p-[0px] mob:w-full mob:mx-[10px]'>
+            <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
                 <Image src='/CNN.jpeg' width={500} height={500} alt='CNN' className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Image_classifier</h1>
@@ -107,7 +107,7 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px] flex-1'>
+            <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
                 <Image src='/django.png' width={500} height={500} alt='django' className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Django_demo</h1>
