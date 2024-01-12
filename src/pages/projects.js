@@ -7,6 +7,7 @@ import Findme from '../components/Findme';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 import { BsGithub } from "react-icons/bs"
+import { CgWebsite } from "react-icons/cg";
 
 
 function projects() {
@@ -34,7 +35,7 @@ function projects() {
                     <p className='pb-[20px]'>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
                     <div className='flex justify-center'>
                     <Link 
-                        href='https://github.com/Shubham-karn'
+                        href='https://github.com/Shubham-karn/portfolio'
                         target="_blank"
                         className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
@@ -51,12 +52,21 @@ function projects() {
                     <p className='pb-[20px]'>A basic YOLOv8 model used to detect Cricketers in a video.</p>
                     <div className='flex justify-center'>
                     <Link 
-                        href='https://github.com/Shubham-karn'
+                        href='https://github.com/Shubham-karn/YOLO'
                         target="_blank"
-                        className='project-button p-[10px]'>
+                        className='project-button p-[10px] mx-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
                         <span style={{ marginLeft: "10px" }}>Github</span>
                     </Link>
+
+                    <Link 
+                        href='https://www.youtube.com/watch?v=3vDBO68fQ7s'
+                        target="_blank"
+                        className='project-button p-[10px] mx-[10px]'>
+                        <CgWebsite style={{ fontSize: "1.2em" }} />{" "}
+                        <span style={{ marginLeft: "10px" }}>Demo</span>
+                    </Link>
+
                     </div>
                 </div>
             </div>
@@ -68,7 +78,7 @@ function projects() {
                     <p className='pb-[20px]'>This is a basic linear regression model using sklearn. I have analyzed the data and clearly predicted the data</p>
                     <div className='flex justify-center'>
                     <Link 
-                        href='https://github.com/Shubham-karn'
+                        href='https://github.com/Shubham-karn/logistic_regression'
                         target="_blank"
                         className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
@@ -79,7 +89,7 @@ function projects() {
             </div>
         </div>
 
-        <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-3/4 mx-auto'>
+        <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-[73vw] mx-auto'>
             <div className='project-card-view mx-[25px] flex-1'>
                 <Image src='/CNN.jpeg' width={500} height={500} className='p-[25px]' />
                 <div className='p-[30px]'>
@@ -87,7 +97,7 @@ function projects() {
                     <p className='pb-[20px]'>This is a simple example of CNN classifying happy and sad people</p>
                     <div className='flex justify-center'>
                     <Link 
-                        href='https://github.com/Shubham-karn'
+                        href='https://github.com/Shubham-karn/image_classifier'
                         target="_blank"
                         className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
@@ -104,7 +114,7 @@ function projects() {
                     <p className='pb-[20px]'>This is to create a basic Django app, containerize it, and deploy it to Microsoft Azure with a CI/CD pipeline in GitHub Actions.</p>
                     <div className='flex justify-center'>
                     <Link 
-                        href='https://github.com/Shubham-karn'
+                        href='https://github.com/Shubham-karn/django_demo'
                         target="_blank"
                         className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
