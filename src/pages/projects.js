@@ -26,8 +26,8 @@ function projects() {
             </div>
         </div>
 
-        <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px]'>
-            <div className='project-card-view mx-[25px] flex-1 h-full'>
+        <div className='text-gray-300 flex items-stretch justify-evenly px-[100px] py-[25px]'>
+            <div className='project-card-view mx-[25px] flex-1'>
                 <Image src='/portfolio.png' width={500} height={500} className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
@@ -44,7 +44,7 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px] flex-1 h-full'>
+            <div className='project-card-view mx-[25px] flex-1'>
                 <Image src='/YOLO.jpeg' width={500} height={500} className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Image Detection</h1>
@@ -61,7 +61,7 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px] flex-1 h-full'>
+            <div className='project-card-view mx-[25px] flex-1'>
                 <Image src='/logistic_regression.jpeg' width={500} height={500} className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Data Analysis</h1>
@@ -80,7 +80,7 @@ function projects() {
         </div>
 
         <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-3/4 mx-auto'>
-            <div className='project-card-view mx-[25px] flex-1 h-full'>
+            <div className='project-card-view mx-[25px] flex-1'>
                 <Image src='/CNN.jpeg' width={500} height={500} className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Image_classifier</h1>
@@ -97,7 +97,7 @@ function projects() {
                 </div>
             </div>
 
-            <div className='project-card-view mx-[25px] flex-1 h-full'>
+            <div className='project-card-view mx-[25px] flex-1'>
                 <Image src='/django.png' width={500} height={500} className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Django_demo</h1>
