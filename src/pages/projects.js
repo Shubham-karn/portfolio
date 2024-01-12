@@ -23,13 +23,13 @@ function projects() {
                 My Recent <span className='purple'> Works </span> 
             </h1>
             <div className='pt-[5px]'>
-                Here are a few projects I've worked on recently
+                Here are a few projects I&apos;ve worked on recently
             </div>
         </div>
 
         <div className='text-gray-300 flex items-stretch justify-evenly px-[100px] py-[25px]'>
             <div className='project-card-view mx-[25px] flex-1'>
-                <Image src='/portfolio.png' width={500} height={500} className='p-[25px]' />
+                <Image src='/portfolio.png' width={500} height={500} alt='portfolio' className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Portfolio</h1>
                     <p className='pb-[20px]'>Discover my portfolio—crafted with Next.js and Tailwind CSS. Seamless, stylish, and showcasing innovative projects. Welcome to my digital space!</p>
@@ -46,7 +46,7 @@ function projects() {
             </div>
 
             <div className='project-card-view mx-[25px] flex-1'>
-                <Image src='/YOLO.jpeg' width={500} height={500} className='pt-[25px] pl-[25px] pr-[25px]' />
+                <Image src='/YOLO.jpeg' width={500} height={500} alt='yolo' className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Image Detection</h1>
                     <p className='pb-[20px]'>A basic YOLOv8 model used to detect Cricketers in a video.</p>
@@ -72,7 +72,7 @@ function projects() {
             </div>
 
             <div className='project-card-view mx-[25px] flex-1'>
-                <Image src='/logistic_regression.jpeg' width={500} height={500} className='p-[25px]' />
+                <Image src='/logistic_regression.jpeg' width={500} height={500} alt='logistic_regression' className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Data Analysis</h1>
                     <p className='pb-[20px]'>This is a basic linear regression model using sklearn. I have analyzed the data and clearly predicted the data</p>
@@ -91,7 +91,7 @@ function projects() {
 
         <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-[73vw] mx-auto'>
             <div className='project-card-view mx-[25px] flex-1'>
-                <Image src='/CNN.jpeg' width={500} height={500} className='p-[25px]' />
+                <Image src='/CNN.jpeg' width={500} height={500} alt='CNN' className='p-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Image_classifier</h1>
                     <p className='pb-[20px]'>This is a simple example of CNN classifying happy and sad people</p>
@@ -108,7 +108,7 @@ function projects() {
             </div>
 
             <div className='project-card-view mx-[25px] flex-1'>
-                <Image src='/django.png' width={500} height={500} className='pt-[25px] pl-[25px] pr-[25px]' />
+                <Image src='/django.png' width={500} height={500} alt='django' className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Django_demo</h1>
                     <p className='pb-[20px]'>This is to create a basic Django app, containerize it, and deploy it to Microsoft Azure with a CI/CD pipeline in GitHub Actions.</p>
