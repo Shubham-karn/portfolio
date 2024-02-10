@@ -43,7 +43,7 @@ function Findme() {
               </li>
               <li className="social-icons">
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/shubham-karn-37a1052b3/"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
