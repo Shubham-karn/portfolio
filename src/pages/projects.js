@@ -72,13 +72,13 @@ function projects() {
             </div>
 
             <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
-                <Image src='/logistic_regression.jpeg' width={500} height={500} alt='logistic_regression' className='p-[25px]' />
-                <div className='p-[30px]'>
-                    <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Data Analysis</h1>
-                    <p className='pb-[20px]'>This is a basic linear regression model using sklearn. I have analyzed the data and clearly predicted the data</p>
+                <Image src='/Apple_detector.png' width={500} height={500} alt='logistic_regression' className='p-[25px]' />
+                <div className='p-[20px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Apple Detector</h1>
+                    <p className='pb-[20px]'>This model is designed to detect apples, count them, classify them based on their color, and identify and reject any that are rotten.</p>
                     <div className='flex justify-center'>
                     <Link 
-                        href='https://github.com/Shubham-karn/logistic_regression'
+                        href='https://github.com/Shubham-karn/Apple_detector'
                         target="_blank"
                         className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
@@ -91,24 +91,24 @@ function projects() {
 
         <div className='text-gray-300 flex justify-evenly px-[100px] py-[25px] w-[73vw] mx-auto 800:block 800:w-[70vw] 800:mx-auto 800:p-[0px] mob:w-full mob:mx-[10px]'>
             <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
-                <Image src='/CNN.jpeg' width={500} height={500} alt='CNN' className='p-[25px]' />
-                <div className='p-[30px]'>
-                    <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Image_classifier</h1>
-                    <p className='pb-[20px]'>This is a simple example of CNN classifying happy and sad people</p>
+                <Image src='/Social_media.jpg' width={400} height={350} alt='CNN' className='p-[25px]' />
+                <div className='p-[20px]'>
+                    <h1 style={{ fontSize: "1.5em", paddingBottom: "5px" }} className='purple text-center'>Social_media trend summarizer</h1>
+                    <p className='pb-[20px]'>I have utilized APIs from Facebook, Instagram, and various news platforms to gather trending news, then applied a summarization model to condense the information into concise summaries.</p>
                     <div className='flex justify-center'>
-                    <Link 
+                    {/* <Link 
                         href='https://github.com/Shubham-karn/image_classifier'
                         target="_blank"
                         className='project-button p-[10px]'>
                         <BsGithub style={{ fontSize: "1.2em" }} />{" "}
                         <span style={{ marginLeft: "10px" }}>Github</span>
-                    </Link>
+                    </Link> */}
                     </div>
                 </div>
             </div>
 
             <div className='project-card-view mx-[25px] flex-1 800:mb-[40px]'>
-                <Image src='/django.png' width={500} height={500} alt='django' className='pt-[25px] pl-[25px] pr-[25px]' />
+                <Image src='/Database.gif' width={500} height={500} alt='django' className='pt-[25px] pl-[25px] pr-[25px]' />
                 <div className='p-[30px]'>
                     <h1 style={{ fontSize: "1.5em", paddingBottom: "10px" }} className='purple text-center'>Django_demo</h1>
                     <p className='pb-[20px]'>This is to create a basic Django app, containerize it, and deploy it to Microsoft Azure with a CI/CD pipeline in GitHub Actions.</p>
