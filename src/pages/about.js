@@ -78,7 +78,7 @@ function About() {
                 Hi Everyone, I am <span className="purple">Shubham Karn </span>
                 from <span className="purple"> Kathmandu, Nepal.</span>
                 <br /> I have completed my <span className='purple'>Engineering </span>
-                from <span className="purple"> Pulchowk Campus</span> and currently working as a software engineer at <span className="purple">Tirnu</span>.
+                from <span className="purple"> Pulchowk Campus</span> and currently working as a software engineer at <span className="purple">Time Charge N GO</span>.
                 <br />
                 <br />
                 Proven track record of delivering top-notch projects, ready to turn your ideas into reality and bring your vision to life.
