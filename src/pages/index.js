@@ -67,37 +67,42 @@ export default function Index() {
             <div className='flex relative pb-[20px] pt-[20px] z-[-1] 800:block'>
               <div className='text-gray-300 p-[50px] pl-[100px] text-left text-xl 1100:pr-[100px] 800:pl-[60px] 800:pr-[40px] 800:text-lg'>
             <p>
-            I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
+            I&apos;m a software developer from Kathmandu, Nepal — currently
+              building enterprise platforms at
               <i>
-                <b className="purple"> C++, Javascript and Python. </b>
+                <b className="purple"> Time Charge N Go. </b>
+              </i>
+              <br />
+              <br />I work fluently across
+              <i>
+                <b className="purple"> TypeScript, JavaScript and Python. </b>
               </i>
               <br />
               <br />
-              My field of Interest&apos;s are building new &nbsp;
+              My fields of interest are building &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">AI-powered products </b> with
+                <b className="purple"> LLMs and RAG</b>, and crafting scalable{" "}
                 <b className="purple">
-                  Machine Learning and Artificial Intelligence.
+                  web platforms and fintech products.
                 </b>
               </i>
               <br />
               <br />
               Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Django and Node.js</b> and
+              with <b className="purple">Django, FastAPI and Node.js</b> and
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  modern frameworks
                 </b>
               </i>
               &nbsp; like
               <i>
                 <b className="purple"> React.js and Next.js</b>
               </i>
+              &nbsp; — shipped with
+              <b className="purple"> Docker, CI/CD and AWS.</b>
             </p>
               </div>
               <div className='w-[45vw] p-[40px] pr-[100px] pt-[10px] justify-center 1200:pt-[80px] 1100:hidden 800:w-full 800:p-[30px]'>
