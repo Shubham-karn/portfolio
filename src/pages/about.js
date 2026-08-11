@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 import Github from '../components/Github';
 import Findme from '../components/Findme';
+import Reveal from '../components/Reveal';
 import Image from 'next/image';
 import { ImPointRight } from "react-icons/im";
 import { CgCPlusPlus } from "react-icons/cg";
@@ -113,6 +115,22 @@ const certifications = [
     credential: "Credential ID 674d701d1f5dde62b389d066",
     skills: "Artificial Intelligence · Artificial Neural Networks · Machine Learning · MLOps",
   },
+  {
+    title: "Generative AI with Large Language Models",
+    issuer: "DeepLearning.AI & Amazon Web Services",
+    issued: "Issued May 2024",
+    credential: "Credential ID J3U2M8G6NJ5W",
+    href: "https://coursera.org/verify/J3U2M8G6NJ5W",
+    skills: "Generative AI · Large Language Models · Prompt Engineering · Fine-Tuning · RLHF",
+  },
+  {
+    title: "Neural Networks and Deep Learning",
+    issuer: "DeepLearning.AI",
+    issued: "Issued Feb 2024",
+    credential: "Credential ID PX4WFUAEVR45",
+    href: "https://coursera.org/verify/PX4WFUAEVR45",
+    skills: "Deep Learning · Neural Networks · Backpropagation · Python",
+  },
 ];
 
 function About() {
@@ -176,24 +194,26 @@ function About() {
         </h1>
 
         <div className='text-gray-300 max-w-[900px] mx-auto px-[40px] 800:px-[25px]'>
-          {experiences.map((exp) => (
-            <div key={exp.company} className='relative border-l-2 border-[#667eea55] pl-[35px] pb-[45px] ml-[10px] 800:pl-[25px]'>
-              <span className='absolute left-[-9px] top-[6px] w-[16px] h-[16px] rounded-full bg-[#667eea] shadow-[0_0_12px_#667eea]'></span>
-              <div className='flex justify-between items-baseline flex-wrap'>
-                <h2 className='text-2xl font-semibold purple'>{exp.role}</h2>
-                <span className='text-quote'>{exp.period}</span>
+          {experiences.map((exp, index) => (
+            <Reveal key={exp.company} delay={index * 120}>
+              <div className='relative border-l-2 border-[#667eea55] pl-[35px] pb-[45px] ml-[10px] 800:pl-[25px]'>
+                <span className='timeline-dot absolute left-[-9px] top-[6px] w-[16px] h-[16px] rounded-full bg-[#667eea] shadow-[0_0_12px_#667eea]'></span>
+                <div className='flex justify-between items-baseline flex-wrap'>
+                  <h2 className='text-2xl font-semibold purple'>{exp.role}</h2>
+                  <span className='text-quote'>{exp.period}</span>
+                </div>
+                <p className='text-lg pb-[5px]'>{exp.company} · <span className='text-gray-400 text-base'>{exp.location}</span></p>
+                <ul className='pt-[10px]'>
+                  {exp.points.map((point, i) => (
+                    <li key={i} className='flex pb-[8px]'>
+                      <ImPointRight className='mt-[5px] shrink-0' />
+                      <span className='pl-[10px]'>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className='pt-[8px] text-quote'>{exp.stack}</p>
               </div>
-              <p className='text-lg pb-[5px]'>{exp.company} · <span className='text-gray-400 text-base'>{exp.location}</span></p>
-              <ul className='pt-[10px]'>
-                {exp.points.map((point, i) => (
-                  <li key={i} className='flex pb-[8px]'>
-                    <ImPointRight className='mt-[5px] shrink-0' />
-                    <span className='pl-[10px]'>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className='pt-[8px] text-quote'>{exp.stack}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -225,14 +245,25 @@ function About() {
           Licenses & <span className="purple"> Certifications </span>
         </h1>
 
-        <div className='flex justify-center mx-20 800:mx-8'>
-          {certifications.map((cert) => (
-            <div key={cert.title} className='project-card-view max-w-[600px] p-[35px] text-center text-gray-300'>
-              <h2 className='text-2xl font-semibold purple pb-[10px]'>{cert.title}</h2>
-              <p className='text-lg pb-[5px]'>{cert.issuer} · {cert.issued}</p>
-              <p className='text-gray-400 text-sm pb-[15px]'>{cert.credential}</p>
-              <p className='text-quote'>{cert.skills}</p>
-            </div>
+        <div className='flex flex-wrap justify-center gap-[25px] mx-10 800:mx-6'>
+          {certifications.map((cert, index) => (
+            <Reveal key={cert.title} delay={index * 120} className='w-[370px] max-w-full'>
+              <div className='project-card-view h-full p-[30px] text-center text-gray-300'>
+                <h2 className='text-xl font-semibold purple pb-[10px]'>{cert.title}</h2>
+                <p className='text-lg pb-[5px]'>{cert.issuer}</p>
+                <p className='pb-[5px]'>{cert.issued}</p>
+                <p className='text-gray-400 text-sm pb-[15px]'>{cert.credential}</p>
+                <p className='text-quote pb-[15px]'>{cert.skills}</p>
+                {cert.href && (
+                  <Link
+                    href={cert.href}
+                    target="_blank"
+                    className='purple underline underline-offset-4 text-sm'>
+                    Verify credential
+                  </Link>
+                )}
+              </div>
+            </Reveal>
           ))}
         </div>
 
