@@ -22,9 +22,11 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiAmazonaws,
+  SiMicrosoftazure,
   SiTailwindcss,
   SiJupyter,
   SiTensorflow,
+  SiPytorch,
   SiNginx,
   SiScikitlearn,
   SiVisualstudiocode,
@@ -33,7 +35,11 @@ import {
   SiPostgresql,
   SiRedis,
   SiFastapi,
+  SiExpress,
+  SiCelery,
+  SiFlutter,
   SiGitlab,
+  SiGithubactions,
 } from "react-icons/si";
 import { FaDocker, FaLinux } from "react-icons/fa";
 
@@ -44,18 +50,23 @@ const skills = [
   { name: "Python", Icon: DiPython },
   { name: "React.js", Icon: DiReact },
   { name: "Next.js", Icon: SiNextdotjs },
+  { name: "Tailwind CSS", Icon: SiTailwindcss },
+  { name: "Flutter", Icon: SiFlutter },
   { name: "Node.js", Icon: DiNodejs },
+  { name: "Express", Icon: SiExpress },
   { name: "Django", Icon: DiDjango },
   { name: "FastAPI", Icon: SiFastapi },
-  { name: "Tailwind CSS", Icon: SiTailwindcss },
+  { name: "Celery", Icon: SiCelery },
   { name: "MongoDB", Icon: SiMongodb },
   { name: "PostgreSQL", Icon: SiPostgresql },
   { name: "Redis", Icon: SiRedis },
-  { name: "AWS", Icon: SiAmazonaws },
-  { name: "Nginx", Icon: SiNginx },
+  { name: "PyTorch", Icon: SiPytorch },
   { name: "TensorFlow", Icon: SiTensorflow },
   { name: "scikit-learn", Icon: SiScikitlearn },
   { name: "Jupyter", Icon: SiJupyter },
+  { name: "AWS", Icon: SiAmazonaws },
+  { name: "Azure", Icon: SiMicrosoftazure },
+  { name: "Nginx", Icon: SiNginx },
 ];
 
 const tools = [
@@ -63,8 +74,9 @@ const tools = [
   { name: "VS Code", Icon: SiVisualstudiocode },
   { name: "Postman", Icon: SiPostman },
   { name: "Git", Icon: DiGit },
-  { name: "GitLab CI/CD", Icon: SiGitlab },
   { name: "Docker", Icon: FaDocker },
+  { name: "GitLab CI/CD", Icon: SiGitlab },
+  { name: "GitHub Actions", Icon: SiGithubactions },
 ];
 
 const experiences = [
@@ -113,6 +125,7 @@ const certifications = [
     issuer: "Fusemachines",
     issued: "Issued Oct 2024",
     credential: "Credential ID 674d701d1f5dde62b389d066",
+    href: "https://verifycertificates.fuseclassroom.com/?certificateId=674d701d1f5dde62b389d066",
     skills: "Artificial Intelligence · Artificial Neural Networks · Machine Learning · MLOps",
   },
   {
@@ -222,10 +235,13 @@ function About() {
         </h1>
 
         <div className='flex flex-wrap justify-center text-white mx-20 800:mx-6'>
-          {skills.map(({ name, Icon }) => (
-            <div key={name} className='tech-icons py-[30px] px-[70px]' title={name}>
-              <Icon />
-            </div>
+          {skills.map(({ name, Icon }, index) => (
+            <Reveal key={name} delay={(index % 8) * 50} className='flex flex-col items-center'>
+              <div className='tech-icons py-[30px] px-[70px] 800:py-[20px] 800:px-[30px]'>
+                <Icon />
+              </div>
+              <span className='text-gray-300 text-sm pb-[15px]'>{name}</span>
+            </Reveal>
           ))}
         </div>
 
@@ -234,10 +250,13 @@ function About() {
         </h1>
 
         <div className='flex flex-wrap justify-center text-white mx-20 800:mx-6'>
-          {tools.map(({ name, Icon }) => (
-            <div key={name} className='tech-icons py-[30px] px-[70px]' title={name}>
-              <Icon />
-            </div>
+          {tools.map(({ name, Icon }, index) => (
+            <Reveal key={name} delay={(index % 8) * 50} className='flex flex-col items-center'>
+              <div className='tech-icons py-[30px] px-[70px] 800:py-[20px] 800:px-[30px]'>
+                <Icon />
+              </div>
+              <span className='text-gray-300 text-sm pb-[15px]'>{name}</span>
+            </Reveal>
           ))}
         </div>
 

@@ -299,6 +299,14 @@ button:focus {
   border: 2.2px solid rgba(197, 115, 230, 0.883) ;
 }
 
+/* Shrink the tiles on small screens so they sit two to a row. */
+@media screen and (max-width: 799px) {
+  .tech-icons {
+    font-size: 3.2em;
+    margin: 10px;
+  }
+}
+
 .project-card-view {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
