@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -18,6 +18,7 @@ import {
 } from "react-icons/di";
 import {
   SiNextdotjs,
+  SiTypescript,
   SiAmazonaws,
   SiTailwindcss,
   SiJupyter,
@@ -26,41 +27,95 @@ import {
   SiScikitlearn,
   SiVisualstudiocode,
   SiPostman,
+  SiMongodb,
+  SiPostgresql,
+  SiRedis,
+  SiFastapi,
+  SiGitlab,
 } from "react-icons/si";
-import { FaDocker, FaDatabase, FaLinux, } from "react-icons/fa";
+import { FaDocker, FaLinux } from "react-icons/fa";
+
+const skills = [
+  { name: "C++", Icon: CgCPlusPlus },
+  { name: "JavaScript", Icon: DiJavascript1 },
+  { name: "TypeScript", Icon: SiTypescript },
+  { name: "Python", Icon: DiPython },
+  { name: "React.js", Icon: DiReact },
+  { name: "Next.js", Icon: SiNextdotjs },
+  { name: "Node.js", Icon: DiNodejs },
+  { name: "Django", Icon: DiDjango },
+  { name: "FastAPI", Icon: SiFastapi },
+  { name: "Tailwind CSS", Icon: SiTailwindcss },
+  { name: "MongoDB", Icon: SiMongodb },
+  { name: "PostgreSQL", Icon: SiPostgresql },
+  { name: "Redis", Icon: SiRedis },
+  { name: "AWS", Icon: SiAmazonaws },
+  { name: "Nginx", Icon: SiNginx },
+  { name: "TensorFlow", Icon: SiTensorflow },
+  { name: "scikit-learn", Icon: SiScikitlearn },
+  { name: "Jupyter", Icon: SiJupyter },
+];
+
+const tools = [
+  { name: "Linux", Icon: FaLinux },
+  { name: "VS Code", Icon: SiVisualstudiocode },
+  { name: "Postman", Icon: SiPostman },
+  { name: "Git", Icon: DiGit },
+  { name: "GitLab CI/CD", Icon: SiGitlab },
+  { name: "Docker", Icon: FaDocker },
+];
+
+const experiences = [
+  {
+    role: "Software Developer",
+    company: "Time Charge N Go",
+    period: "Jun 2025 - Present",
+    location: "Selangor, Malaysia · Remote",
+    points: [
+      "Designed and developed a company-wide Document Management System with Django and Next.js — version control, automated approval chains and compliance workflows.",
+      "Built and deployed an HR/Employee Management System that digitized core HR operations, with role-based access control and audit trails.",
+      "Manage production deployment and DevOps — containerization, CI/CD pipelines and monitoring — and optimized database design for large-scale document storage.",
+    ],
+    stack: "Django REST Framework · Next.js · PostgreSQL · Docker",
+  },
+  {
+    role: "Full-stack Developer",
+    company: "Tirnu",
+    period: "Jun 2024 - Jul 2025",
+    location: "London, United Kingdom · Remote",
+    points: [
+      "Enhanced the TIRNU online banking app with business banking and crypto features, helping expand the user base by 25%.",
+      "Integrated Ethereum, Solana and Tron with WalletConnect, RainbowKit, Crossmint and Fireblocks for secure digital asset management.",
+      "Wired up Sumsub identity verification, Binance/Ramp exchange rails and SEPA/SWIFT banking APIs for domestic and international transactions.",
+      "Deployed frontend and backend on AWS with GitLab CI/CD, Docker and Nginx.",
+    ],
+    stack: "React.js · TypeScript · Node.js · MongoDB · Redis · AWS",
+  },
+  {
+    role: "AI / Software Developer — Freelance",
+    company: "Fiverr & Upwork",
+    period: "Sep 2023 - Apr 2024",
+    location: "Remote",
+    points: [
+      "Trained a YOLOv8 model to count apples and grade their quality, served through an API deployed to Azure with GitHub Actions CI/CD.",
+      "Built a real-estate data pipeline with FastAPI and MySQL, served through a Next.js frontend.",
+      "Delivered a baseball betting app and Django REST backends for client projects.",
+    ],
+    stack: "Python · FastAPI · Django · Computer Vision · React.js",
+  },
+];
+
+const certifications = [
+  {
+    title: "Microdegree™ in Artificial Intelligence",
+    issuer: "Fusemachines",
+    issued: "Issued Oct 2024",
+    credential: "Credential ID 674d701d1f5dde62b389d066",
+    skills: "Artificial Intelligence · Artificial Neural Networks · Machine Learning · MLOps",
+  },
+];
 
 function About() {
-  const [load, upadateLoad] = useState(0);
-
-  useEffect(() => {
-    const changescreen = () => {
-      const screenWidth = window.innerWidth || document.documentElement.clientWidth;
-      if (screenWidth < 1200 && screenWidth > 1000) {
-        upadateLoad(1200);
-      }
-      else if (screenWidth < 1000 && screenWidth > 700) {
-        upadateLoad(1000);
-      }
-      else if (screenWidth < 700 && screenWidth > 500) {
-        upadateLoad(700);
-      }
-      else if (screenWidth < 500) {
-        upadateLoad(500);
-      }
-      else {
-        upadateLoad(0);
-      }
-    }
-
-    changescreen();
-
-    window.addEventListener('resize', changescreen);
-
-    return () => {
-      window.removeEventListener('resize', changescreen);
-    }
-  }, []);
-
   return (
     <>
       <Head>
@@ -77,11 +132,11 @@ function About() {
               <p style={{ textAlign: "justify" }}>
                 Hi Everyone, I am <span className="purple">Shubham Karn </span>
                 from <span className="purple"> Kathmandu, Nepal.</span>
-                <br /> I have completed my <span className='purple'>Engineering </span>
-                from <span className="purple"> Pulchowk Campus</span> and currently working as a software engineer at <span className="purple">Time Charge N GO</span>.
+                <br /> I completed my <span className='purple'>Engineering </span>
+                from <span className="purple"> IOE, Pulchowk Campus</span> (Tribhuvan University) and currently work as a Software Developer at <span className="purple">Time Charge N Go</span>, a subsidiary of TIME dotcom.
                 <br />
                 <br />
-                Proven track record of delivering top-notch projects, ready to turn your ideas into reality and bring your vision to life.
+                Previously, I built business banking and crypto features for <span className="purple">Tirnu</span>, a UK-based fintech, and delivered AI and full-stack projects as a freelancer — from computer-vision pipelines to RAG-powered assistants.
                 <br />
                 <br />
                 Apart from coding, some other activities that I love to do!
@@ -116,437 +171,70 @@ function About() {
           </div>
         </div>
 
+        <h1 style={{ fontSize: "2.3em" }} className='text-gray-300 pt-[50px] pb-[30px] text-center'>
+          Professional <span className="purple"> Experience </span>
+        </h1>
+
+        <div className='text-gray-300 max-w-[900px] mx-auto px-[40px] 800:px-[25px]'>
+          {experiences.map((exp) => (
+            <div key={exp.company} className='relative border-l-2 border-[#667eea55] pl-[35px] pb-[45px] ml-[10px] 800:pl-[25px]'>
+              <span className='absolute left-[-9px] top-[6px] w-[16px] h-[16px] rounded-full bg-[#667eea] shadow-[0_0_12px_#667eea]'></span>
+              <div className='flex justify-between items-baseline flex-wrap'>
+                <h2 className='text-2xl font-semibold purple'>{exp.role}</h2>
+                <span className='text-quote'>{exp.period}</span>
+              </div>
+              <p className='text-lg pb-[5px]'>{exp.company} · <span className='text-gray-400 text-base'>{exp.location}</span></p>
+              <ul className='pt-[10px]'>
+                {exp.points.map((point, i) => (
+                  <li key={i} className='flex pb-[8px]'>
+                    <ImPointRight className='mt-[5px] shrink-0' />
+                    <span className='pl-[10px]'>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className='pt-[8px] text-quote'>{exp.stack}</p>
+            </div>
+          ))}
+        </div>
+
         <h1 style={{ fontSize: "2.3em" }} className='text-gray-300 pt-[50px] pb-[20px] text-center'>
           Professional <span className="purple"> Skillset </span>
         </h1>
 
-        <div className='flex justify-center text-white mx-20 1200:hidden 1100:hidden 800:hidden'>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <CgCPlusPlus />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <DiJavascript1 />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <DiNodejs />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <DiReact />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <FaDatabase />
-          </div>
+        <div className='flex flex-wrap justify-center text-white mx-20 800:mx-6'>
+          {skills.map(({ name, Icon }) => (
+            <div key={name} className='tech-icons py-[30px] px-[70px]' title={name}>
+              <Icon />
+            </div>
+          ))}
         </div>
-
-        {load === 1200 ? (
-          <div className='flex justify-center text-white mx-20'>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <CgCPlusPlus />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <DiJavascript1 />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <DiNodejs />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <DiReact />
-            </div>
-          </div>
-        )
-          : (load === 1000 ?
-            <>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <CgCPlusPlus />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <DiJavascript1 />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <DiNodejs />
-                </div>
-              </div>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <DiReact />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiTailwindcss />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiAmazonaws />
-                </div>
-              </div>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiNextdotjs />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <DiDjango />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiNginx />
-                </div>
-              </div>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <DiPython />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiScikitlearn />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <FaDatabase />
-                </div>
-              </div>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiJupyter />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiTensorflow />
-                </div>
-              </div>
-            </>
-            : (load === 700 ?
-              <>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <CgCPlusPlus />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <DiJavascript1 />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <DiNodejs />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <DiReact />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiNextdotjs />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <DiDjango />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiNginx />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <FaDatabase />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiAmazonaws />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiTailwindcss />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <DiPython />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiJupyter />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiTensorflow />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiScikitlearn />
-                  </div>
-                </div>
-              </>
-              : (load === 500
-                ?
-                <>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <CgCPlusPlus />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <DiJavascript1 />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <DiNodejs />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <DiReact />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <FaDatabase />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiNextdotjs />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <DiDjango />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiTailwindcss />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiAmazonaws />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiNginx />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <DiPython />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiJupyter />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiTensorflow />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiScikitlearn />
-                    </div>
-                  </div>
-                </>
-                : <></>)))}
-
-        <div className='flex justify-center text-white mx-20 1200:hidden 1100:hidden 800:hidden'>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiNextdotjs />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <DiDjango />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiTailwindcss />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiAmazonaws />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiNginx />
-          </div>
-        </div>
-
-        {load === 1200 ? (
-          <div className='flex justify-center text-white mx-20'>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiNextdotjs />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <DiDjango />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiTailwindcss />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiAmazonaws />
-            </div>
-          </div>
-        )
-          : <></>}
-
-        {load === 1200 ? (
-          <div className='flex justify-center text-white mx-20'>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <DiPython />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiJupyter />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiNginx />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <FaDatabase />
-            </div>
-          </div>
-        )
-          : <></>}
-
-        <div className='flex justify-center text-white mx-20 1200:hidden 1100:hidden 800:hidden'>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <DiPython />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiJupyter />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiTensorflow />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiScikitlearn />
-          </div>
-        </div>
-
-        {load === 1200 ? (
-          <div className='flex justify-center text-white mx-20'>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiTensorflow />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiScikitlearn />
-            </div>
-          </div>
-        )
-          : <></>}
 
         <h1 style={{ fontSize: "2.3em" }} className='text-gray-300 pt-[50px] pb-[20px] text-center'>
           <span className="purple"> Tools </span> I Use
         </h1>
 
-        <div className='flex justify-center text-white mx-20 1200:hidden 1100:hidden 800:hidden'>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <FaLinux />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiVisualstudiocode />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <SiPostman />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <DiGit />
-          </div>
-          <div className='tech-icons py-[30px] px-[70px]'>
-            <FaDocker />
-          </div>
+        <div className='flex flex-wrap justify-center text-white mx-20 800:mx-6'>
+          {tools.map(({ name, Icon }) => (
+            <div key={name} className='tech-icons py-[30px] px-[70px]' title={name}>
+              <Icon />
+            </div>
+          ))}
         </div>
 
-        {load === 1200 ? (
-          <div className='flex justify-center text-white mx-20'>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <FaLinux />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiVisualstudiocode />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <SiPostman />
-            </div>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <DiGit />
-            </div>
-          </div>
-        )
-          : (load === 1000 ?
-            <>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <FaLinux />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiVisualstudiocode />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <SiPostman />
-                </div>
-              </div>
-              <div className='flex justify-center text-white mx-20'>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <DiGit />
-                </div>
-                <div className='tech-icons py-[30px] px-[70px]'>
-                  <FaDocker />
-                </div>
-              </div>
-            </>
-            : (load === 700 ?
-              <>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <FaLinux />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiVisualstudiocode />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <DiGit />
-                  </div>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <FaDocker />
-                  </div>
-                </div>
-                <div className='flex justify-center text-white mx-20'>
-                  <div className='tech-icons py-[30px] px-[70px]'>
-                    <SiPostman />
-                  </div>
-                </div>
-              </>
-              : (load === 500 ?
-                <>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <FaLinux />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiVisualstudiocode />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <SiPostman />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <DiGit />
-                    </div>
-                  </div>
-                  <div className='flex justify-center text-white mx-20'>
-                    <div className='tech-icons py-[30px] px-[70px]'>
-                      <FaDocker />
-                    </div>
-                  </div>
-                </>
-                : <></>)))}
+        <h1 style={{ fontSize: "2.3em" }} className='text-gray-300 pt-[50px] pb-[30px] text-center'>
+          Licenses & <span className="purple"> Certifications </span>
+        </h1>
 
-        {load === 1200 ? (
-          <div className='flex justify-center text-white mx-20'>
-            <div className='tech-icons py-[30px] px-[70px]'>
-              <FaDocker />
+        <div className='flex justify-center mx-20 800:mx-8'>
+          {certifications.map((cert) => (
+            <div key={cert.title} className='project-card-view max-w-[600px] p-[35px] text-center text-gray-300'>
+              <h2 className='text-2xl font-semibold purple pb-[10px]'>{cert.title}</h2>
+              <p className='text-lg pb-[5px]'>{cert.issuer} · {cert.issued}</p>
+              <p className='text-gray-400 text-sm pb-[15px]'>{cert.credential}</p>
+              <p className='text-quote'>{cert.skills}</p>
             </div>
-          </div>
-        )
-          : <></>}
+          ))}
+        </div>
 
         <Github />
         <Findme />
